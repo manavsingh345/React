@@ -12,26 +12,32 @@ function App() {
 }
 
 function LightBulb() {
+  const [bulbOn, setBulbOn] = useState(true);
   return (
     <div>
-      <BulbState />
-      <ToggleBulbState />
+      <BulbState bulbOn={bulbOn} />
+      <ToggleBulbState setBulbOn={setBulbOn} />
     </div>
   )
 }
 
-function BulbState() {
+function BulbState({ bulbOn }) {
+
+
   return (
     <div>
-
+      {bulbOn ? "Bulb on" : "Bulb off"}
     </div>
   )
 }
 
-function ToggleBulbState() {
+function ToggleBulbState({ setBulbOn }) {
+  function toggle() {
+    setBulbOn(currentState => !currentState)
+  }
   return (
     <div>
-      <button>Toggle the bulb</button>
+      <button onClick={toggle}>Toggle the bulb</button>
     </div>
   )
 }

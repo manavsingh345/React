@@ -1,5 +1,7 @@
+import ImageSlider from "./ImageSlider";
 import MapList from "./MapList";
 import UserProfile from "./UserProfile";
+import CheckList from "./CheckList";
 
 export default function App() {
   const manageUsers = () => {
@@ -15,7 +17,9 @@ export default function App() {
         manageUsers={manageUsers}
       /> */}
 
-      <MapList/>
+      {/* <MapList/> */}
+      {/* <ImageSlider/> */}
+      <CheckList/>
     </div>
   );
 }

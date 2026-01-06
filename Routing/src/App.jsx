@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
-
+import Layout from './Layout.jsx';
 import Class11Program from "./Class11Program.jsx";
 import Class12Program from "./Class12Program.jsx";
 import LandingPage from "./LandingPage.jsx";
@@ -26,20 +26,6 @@ function App() {
   )
 }
 
-function Layout() {
-  return (
-    <div>
-      <Link to="/neet" >Allen</Link>
-      |
-      <Link to="/neet/online-coaching-class-11" >Class 11</Link >
-      |
-      <Link to="/neet/online-coaching-class-12" >Class 12</Link >
-      <div>
-        <Outlet />
-      </div>
-      footer
-    </div>
-  )
-}
+
 
 export default App
